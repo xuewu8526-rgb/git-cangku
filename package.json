@@ -9,7 +9,6 @@
     "build": "max build",
     "deploy": "cross-env CI=true max build && gh-pages -d dist",
     "dev": "cross-env UMI_ENV=dev MOCK=none max dev",
-    "i18n-remove": "node scripts/i18n-remove.js",
     "lint": "npm run biome:lint && npm run tsc",
     "lint-staged": "lint-staged",
     "biome:lint": "biome lint",
@@ -86,7 +85,8 @@
     "swagger-ui-dist": "^5.32.5",
     "tailwindcss": "^4.2.4",
     "ts-node": "^10.9.2",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "umi-request": "^1.4.0"
   },
   "engines": {
     "node": ">=20.0.0"

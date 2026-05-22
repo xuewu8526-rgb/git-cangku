@@ -26,6 +26,15 @@ import { errorConfig } from './requestErrorConfig';
 const isDev = process.env.NODE_ENV === 'development';
 const loginPath = '/user/login';
 
+export const request: RequestConfig = {
+  timeout: 10000, // 建议 10 秒
+  ...(isDev ? { baseURL: '/api' } : { prefix: '线上' }),
+
+  // baseURL: isDev ? '' : 'https://pro-api.ant-design-demo.workers.dev',
+  // errorConfig, // 引入错误处理配置
+  // requestInterceptors: [],
+  // responseInterceptors: [],
+};
 /**
  * @see https://umijs.org/docs/api/runtime-config#getinitialstate
  * */
@@ -183,10 +192,10 @@ export const layout: RunTimeLayoutConfig = ({
  * 它基于 axios 提供了一套统一的网络请求和错误处理方案。
  * @doc https://umijs.org/docs/max/request#配置
  */
-export const request: RequestConfig = {
-  baseURL: isDev ? '' : 'https://pro-api.ant-design-demo.workers.dev',
-  ...errorConfig,
-};
+// export const request: RequestConfig = {
+//   baseURL: isDev ? '' : 'https://pro-api.ant-design-demo.workers.dev',
+//   ...errorConfig,
+// };
 
 export function rootContainer(container: React.ReactNode) {
   return (

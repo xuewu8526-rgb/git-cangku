@@ -17,7 +17,7 @@ export default [
     routes: [
       {
         path: '/user/login',
-        name: 'login',
+        name: '登录',
         component: './user/login',
       },
       {
@@ -25,13 +25,13 @@ export default [
         redirect: '/user/login',
       },
       {
-        name: 'register-result',
+        name: '注册结果',
         icon: 'checkCircle',
         path: '/user/register-result',
         component: './user/register-result',
       },
       {
-        name: 'register',
+        name: '注册',
         icon: 'userAdd',
         path: '/user/register',
         component: './user/register',
@@ -45,13 +45,13 @@ export default [
   },
   {
     path: '/welcome',
-    name: 'welcome',
+    name: '欢迎',
     icon: 'home',
     component: './Welcome',
   },
   {
     path: '/admin',
-    name: 'admin',
+    name: '管理页',
     icon: 'crown',
     access: 'canAdmin',
     routes: [
@@ -67,67 +67,9 @@ export default [
     ],
   },
   {
-    path: '/dashboard',
-    name: 'dashboard',
-    icon: 'dashboard',
-    routes: [
-      {
-        path: '/dashboard',
-        redirect: '/dashboard/analysis',
-      },
-      {
-        name: 'analysis',
-        icon: 'barChart',
-        path: '/dashboard/analysis',
-        component: './dashboard/analysis',
-      },
-      {
-        name: 'monitor',
-        icon: 'monitor',
-        path: '/dashboard/monitor',
-        component: './dashboard/monitor',
-      },
-      {
-        name: 'workplace',
-        icon: 'desktop',
-        path: '/dashboard/workplace',
-        component: './dashboard/workplace',
-      },
-    ],
-  },
-  {
-    path: '/form',
-    icon: 'form',
-    name: 'form',
-    routes: [
-      {
-        path: '/form',
-        redirect: '/form/basic-form',
-      },
-      {
-        name: 'basic-form',
-        icon: 'form',
-        path: '/form/basic-form',
-        component: './form/basic-form',
-      },
-      {
-        name: 'step-form',
-        icon: 'orderedList',
-        path: '/form/step-form',
-        component: './form/step-form',
-      },
-      {
-        name: 'advanced-form',
-        icon: 'profile',
-        path: '/form/advanced-form',
-        component: './form/advanced-form',
-      },
-    ],
-  },
-  {
     path: '/list',
     icon: 'table',
-    name: 'list',
+    name: '列表页',
     routes: [
       {
         path: '/list/search',
@@ -183,53 +125,7 @@ export default [
     ],
   },
   {
-    path: '/profile',
-    name: 'profile',
-    icon: 'profile',
-    routes: [
-      {
-        path: '/profile',
-        redirect: '/profile/basic',
-      },
-      {
-        name: 'basic',
-        icon: 'idcard',
-        path: '/profile/basic',
-        component: './profile/basic',
-      },
-      {
-        name: 'advanced',
-        icon: 'crown',
-        path: '/profile/advanced',
-        component: './profile/advanced',
-      },
-    ],
-  },
-  {
-    name: 'result',
-    icon: 'checkCircle',
-    path: '/result',
-    routes: [
-      {
-        path: '/result',
-        redirect: '/result/success',
-      },
-      {
-        name: 'success',
-        icon: 'checkCircle',
-        path: '/result/success',
-        component: './result/success',
-      },
-      {
-        name: 'fail',
-        icon: 'closeCircle',
-        path: '/result/fail',
-        component: './result/fail',
-      },
-    ],
-  },
-  {
-    name: 'exception',
+    name: '异常页',
     icon: 'warning',
     path: '/exception',
     routes: [
@@ -258,7 +154,7 @@ export default [
     ],
   },
   {
-    name: 'account',
+    name: '个人页',
     icon: 'user',
     path: '/account',
     routes: [
@@ -279,12 +175,6 @@ export default [
         component: './account/settings',
       },
     ],
-  },
-  {
-    path: '/chatbot',
-    name: 'chatbot',
-    icon: 'robot',
-    component: './chatbot',
   },
   {
     path: '/',
